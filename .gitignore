@@ -2,3 +2,6 @@ assets/images/avatar.jpg
 
 Thumbs.db
 .DS_Store
+
+.vercel
+.env*
