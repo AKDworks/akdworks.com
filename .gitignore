@@ -1,0 +1,6 @@
+# Local high-resolution source; the site uses avatar-320.jpg.
+assets/images/avatar.jpg
+
+# Operating-system metadata.
+Thumbs.db
+.DS_Store
