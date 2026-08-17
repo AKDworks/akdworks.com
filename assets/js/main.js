@@ -37,10 +37,10 @@ if (menuBtn && nav) {
   });
 }
 
-const current = location.pathname.split("/").pop() || "index.html";
+const current = (location.pathname.split("/").pop() || "index").replace(/\.html$/, "");
 document.querySelectorAll(".nav a[href]").forEach((link) => {
-  const href = link.getAttribute("href");
-  if (href === current || (current === "index.html" && href === "./")) {
+  const href = new URL(link.href, location.href).pathname.split("/").pop().replace(/\.html$/, "");
+  if (href === current) {
     link.classList.add("is-active");
     link.setAttribute("aria-current", "page");
   }
